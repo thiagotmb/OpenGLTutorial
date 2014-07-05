@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D82D773A-1EC9-4D06-A291-3FA89640526A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenGLTutorial</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8F204424-DA56-4EF3-993C-36D738FED82A</key>
+		<string>https://github.com/thiagotmb/OpenGLTutorial.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OpenGLTutorial/OpenGLTutorial.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8F204424-DA56-4EF3-993C-36D738FED82A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/thiagotmb/OpenGLTutorial.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8F204424-DA56-4EF3-993C-36D738FED82A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F204424-DA56-4EF3-993C-36D738FED82A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenGLTutorial</string>
+		</dict>
+	</array>
+</dict>
+</plist>

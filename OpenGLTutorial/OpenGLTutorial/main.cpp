@@ -7,11 +7,40 @@
 //
 
 #include <iostream>
+#include "Program.h"
+
+GLFWwindow* mainWindow;
+
+
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
+    Program firstProgram = Program();
+    
+    //Window recebe a nossa janela criada pela função que vimos anteriormente.
+    mainWindow = firstProgram.initOpenGL();
+    
+    
+    
+    
+    
+    //Verifica se a janela criada foi fechada a cada iteração.
+    while(!glfwWindowShouldClose(mainWindow)){
+        
+        //Verifica todos os eventos e chama as funções relacionadas a esses eventos
+        
+        glClearColor(1.0f, 1.0f, 1.f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        glfwPollEvents();
+        
+        //Troca o buffer de cor a cada iteração pelo definido.
+        glfwSwapBuffers(mainWindow);
+    }
+    
+    glfwTerminate();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }

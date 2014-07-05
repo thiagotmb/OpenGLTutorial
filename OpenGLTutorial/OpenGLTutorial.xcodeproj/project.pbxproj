@@ -14,6 +14,8 @@
 		0A365E0E1966119600DF038D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A365E0D1966119600DF038D /* Cocoa.framework */; };
 		0A365E10196611A400DF038D /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A365E0F196611A400DF038D /* libglfw3.a */; };
 		0A365E12196611B000DF038D /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A365E11196611B000DF038D /* libGLEW.a */; };
+		0A365E1519663D7400DF038D /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A365E1319663D7400DF038D /* Program.cpp */; };
+		0A3CF92519672F9E00CD1E78 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3CF92419672F9E00CD1E78 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,9 @@
 		0A365E0D1966119600DF038D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A365E0F196611A400DF038D /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../Libs/glfw3/libglfw3.a; sourceTree = "<group>"; };
 		0A365E11196611B000DF038D /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../Libs/glew/src/libGLEW.a; sourceTree = "<group>"; };
+		0A365E1319663D7400DF038D /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
+		0A365E1419663D7400DF038D /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Program.h; sourceTree = "<group>"; };
+		0A3CF92419672F9E00CD1E78 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3CF92519672F9E00CD1E78 /* CoreVideo.framework in Frameworks */,
 				0A365E12196611B000DF038D /* libGLEW.a in Frameworks */,
 				0A365E10196611A400DF038D /* libglfw3.a in Frameworks */,
 				0A365E0E1966119600DF038D /* Cocoa.framework in Frameworks */,
@@ -59,6 +65,7 @@
 		0A365DF41966117800DF038D = {
 			isa = PBXGroup;
 			children = (
+				0A3CF92419672F9E00CD1E78 /* CoreVideo.framework */,
 				0A365E11196611B000DF038D /* libGLEW.a */,
 				0A365E0F196611A400DF038D /* libglfw3.a */,
 				0A365E0D1966119600DF038D /* Cocoa.framework */,
@@ -81,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				0A365E001966117800DF038D /* main.cpp */,
+				0A365E1319663D7400DF038D /* Program.cpp */,
+				0A365E1419663D7400DF038D /* Program.h */,
 				0A365E021966117800DF038D /* OpenGLTutorial.1 */,
 			);
 			path = OpenGLTutorial;
@@ -137,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A365E1519663D7400DF038D /* Program.cpp in Sources */,
 				0A365E011966117800DF038D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,11 +157,12 @@
 		0A365E041966117800DF038D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -161,6 +172,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -176,7 +188,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -185,11 +203,12 @@
 		0A365E051966117800DF038D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -201,6 +220,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -209,7 +229,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -218,6 +244,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -235,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -267,6 +295,7 @@
 				0A365E081966117800DF038D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
