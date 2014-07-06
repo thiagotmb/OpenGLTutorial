@@ -16,13 +16,14 @@
 		0A365E12196611B000DF038D /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A365E11196611B000DF038D /* libGLEW.a */; };
 		0A365E1519663D7400DF038D /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A365E1319663D7400DF038D /* Program.cpp */; };
 		0A3CF92519672F9E00CD1E78 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3CF92419672F9E00CD1E78 /* CoreVideo.framework */; };
+		0A3CF9311969D53200CD1E78 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF92F1969D53200CD1E78 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0A365DFB1966117800DF038D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 				0A365E031966117800DF038D /* OpenGLTutorial.1 in CopyFiles */,
@@ -43,6 +44,10 @@
 		0A365E1319663D7400DF038D /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
 		0A365E1419663D7400DF038D /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Program.h; sourceTree = "<group>"; };
 		0A3CF92419672F9E00CD1E78 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0A3CF92A1969C89600CD1E78 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
+		0A3CF92C1969C8BE00CD1E78 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.glsl; sourceTree = "<group>"; };
+		0A3CF92F1969D53200CD1E78 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		0A3CF9301969D53200CD1E78 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,10 @@
 				0A365E001966117800DF038D /* main.cpp */,
 				0A365E1319663D7400DF038D /* Program.cpp */,
 				0A365E1419663D7400DF038D /* Program.h */,
+				0A3CF92F1969D53200CD1E78 /* Shader.cpp */,
+				0A3CF9301969D53200CD1E78 /* Shader.h */,
+				0A3CF92A1969C89600CD1E78 /* vertex.glsl */,
+				0A3CF92C1969C8BE00CD1E78 /* fragment.glsl */,
 				0A365E021966117800DF038D /* OpenGLTutorial.1 */,
 			);
 			path = OpenGLTutorial;
@@ -147,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A365E1519663D7400DF038D /* Program.cpp in Sources */,
+				0A3CF9311969D53200CD1E78 /* Shader.cpp in Sources */,
 				0A365E011966117800DF038D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

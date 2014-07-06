@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include "Program.h"
-#include "Shader.h"
 
 GLFWwindow* mainWindow;
 
@@ -25,8 +24,6 @@ int main(int argc, const char * argv[])
     
     //Configura os shaders e ligacoes com OpenGL
     firstProgram.setupGLSL();
-    
-    
     
     //Verifica se a janela criada foi fechada a cada iteração.
     while(!glfwWindowShouldClose(mainWindow)){

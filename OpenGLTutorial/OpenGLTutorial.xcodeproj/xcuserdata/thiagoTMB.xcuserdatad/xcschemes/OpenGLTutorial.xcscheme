@@ -44,6 +44,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
+      customWorkingDirectory = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -64,6 +65,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
+      customWorkingDirectory = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial/Debug"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable>

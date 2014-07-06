@@ -16,7 +16,6 @@ GLFWwindow* window;
 GLuint VAO;
 Shader newShader;
 float xOffsetValue;
-float xOffsetFactor;
 
 
 Program::Program(){};
@@ -36,6 +35,13 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     
     if(key == GLFW_KEY_S && action == GLFW_PRESS)
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    
+    if(key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
+        xOffsetValue+=0.05;
+    
+    if(key == GLFW_KEY_LEFT && action == GLFW_PRESS)
+        xOffsetValue-=0.05;
+
     
 }
 
@@ -95,7 +101,6 @@ GLFWwindow* Program::initOpenGL(){
     glfwSetKeyCallback(window, key_callback);
     
     xOffsetValue = 0;
-    xOffsetFactor = 0.01;
 
     
     // return a window create, for use in main
@@ -182,10 +187,7 @@ void Program::render(){
     
     //Informa ao OpenGL que vai usar o programa de shader respsctivo para desenhar
     newShader.use();
-    if(xOffsetValue>0.5 || xOffsetValue<-0.5)
-        xOffsetFactor*=-1;
-        
-    xOffsetValue+=xOffsetFactor;
+    
     //Liga o array de objetos de vertice
     glBindVertexArray(VAO);
     //Desenha as primitivas passadas para o VBO

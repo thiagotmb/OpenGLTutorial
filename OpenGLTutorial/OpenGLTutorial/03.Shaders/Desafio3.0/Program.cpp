@@ -15,10 +15,6 @@
 GLFWwindow* window;
 GLuint VAO;
 Shader newShader;
-float xOffsetValue;
-float xOffsetFactor;
-
-
 Program::Program(){};
 
 Program::~Program(){};
@@ -36,6 +32,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     
     if(key == GLFW_KEY_S && action == GLFW_PRESS)
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
     
 }
 
@@ -94,10 +91,6 @@ GLFWwindow* Program::initOpenGL(){
     //Define qual funcao de KeyCallBack será chamada e para qual janela ela irá funcionar.
     glfwSetKeyCallback(window, key_callback);
     
-    xOffsetValue = 0;
-    xOffsetFactor = 0.01;
-
-    
     // return a window create, for use in main
     //Retorna um janela criada para ser usada no programa principal
     return window;
@@ -126,23 +119,21 @@ void Program::setupGLSL(){
     
     //Cria um objeto de array de vertices
     glGenVertexArrays(1,&VAO);
+    GLuint VBO, EBO;
+    //Cria um objeto de buffer de vértices
+	glGenBuffers(1, &VBO);
+    
     //Liga o array de objetos de vertice
     glBindVertexArray(VAO);
     
-    GLuint VBO, EBO;
-    
-    //Cria um objeto de buffer de vértices
-	glGenBuffers(1, &VBO);
     //Copia o buffer para o objeto de buffer a ser usado pelo OpenGL
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     //Copia os dados de vertices definidos para o objeto de buffer, e configura como será desenhado
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-    
     glGenBuffers(1, &EBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-    
     
     //Envia informacoes ao OpenGL de como será os atributos dos vertices passados ao shader
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE,
@@ -176,16 +167,15 @@ void Program::render(){
     glClear(GL_COLOR_BUFFER_BIT);
     
     
-    GLint xOffsetLocation = glGetUniformLocation(newShader.shaderProgram, "xOffset");
-    glUniform1f(xOffsetLocation,xOffsetValue);
+    GLfloat timeValue = glfwGetTime();
+    GLfloat greenValue = (sin(timeValue) / 2) + 0.5;
+    GLint vertexColorLocation = glGetUniformLocation(newShader.shaderProgram, "color");
+    glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
     
     
     //Informa ao OpenGL que vai usar o programa de shader respsctivo para desenhar
     newShader.use();
-    if(xOffsetValue>0.5 || xOffsetValue<-0.5)
-        xOffsetFactor*=-1;
-        
-    xOffsetValue+=xOffsetFactor;
+    
     //Liga o array de objetos de vertice
     glBindVertexArray(VAO);
     //Desenha as primitivas passadas para o VBO
@@ -195,6 +185,4 @@ void Program::render(){
     glBindVertexArray(0);
    
 }
-
-
 

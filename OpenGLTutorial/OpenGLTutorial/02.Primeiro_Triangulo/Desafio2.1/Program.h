@@ -10,13 +10,8 @@
 #define __OpenGLTutorial__Program__
 
 #include <iostream>
-#include <math.h>
-#include <fstream>
-#include <sstream>
-#include <string>
 #include <GL/glew.h>
 #include <GL/glfw3.h>
-#include "Shader.h"
 
 class Program{
     
