@@ -2,7 +2,7 @@
 //  Program.cpp
 //  OpenGLTutorial
 //
-//  Created by Thiago Bernardes on 7/3/14.
+//  Created by Thiago Meira Bernardes on 7/3/14.
 //  Copyright (c) 2014 TMB. All rights reserved.
 //
 
@@ -158,8 +158,8 @@ void Program::setupGLSL(){
     glBindVertexArray(0);
 
 //
-    const char* vertexPath = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial/vertex.glsl";
-    const char* fragmentPath = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial/fragment.glsl";
+    const char* vertexPath = "/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial/vertex.glsl";
+    const char* fragmentPath = "/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/OpenGLTutorial/OpenGLTutorial/fragment.glsl";
     newShader = Shader();
     newShader.initShader(vertexPath, fragmentPath);
     

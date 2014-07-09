@@ -2,7 +2,7 @@
 //  main.cpp
 //  OpenGLTutorial
 //
-//  Created by Thiago Bernardes on 7/3/14.
+//  Created by Thiago Meira Bernardes on 7/3/14.
 //  Copyright (c) 2014 TMB. All rights reserved.
 //
 

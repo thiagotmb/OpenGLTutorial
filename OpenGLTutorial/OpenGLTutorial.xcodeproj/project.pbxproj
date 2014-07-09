@@ -253,16 +253,16 @@
 		0A365E071966117800DF038D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+					"/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+					"/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -271,16 +271,16 @@
 		0A365E081966117800DF038D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
+				FRAMEWORK_SEARCH_PATHS = "/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**";
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+					"/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/thiagoTMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
+					"/Users/thiagoMB/Documents/Repositories/Tutorials/OpenGLTutorial/Libs/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
